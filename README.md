@@ -13,7 +13,7 @@ Mind Palace uses AI to automate the creative heavy-lifting, making this powerful
 ## 🏗️ How It Works
 
 1. **Upload PDFs** - Add your study materials (textbooks, notes, papers)
-2. **Create Rooms** - Upload room photos or auto-detect objects from images
+2. **Create Rooms** - Upload room objects photos or auto-detect objects from single room image
 3. **AI Generation** - System creates associations between room objects and concepts
 4. **Study & Review** - Walk through your memory palace with interactive visualizations
 
@@ -54,12 +54,11 @@ Mind Palace uses AI to automate the creative heavy-lifting, making this powerful
 
 | Technology | Model/Tool | Purpose |
 |------------|------------|---------|
-| **Vision AI** | Llama 4 Vision (Groq) | Analyze room images, detect objects, generate labels |
-| **Language AI** | Llama 4 17B (Groq) | Create mnemonic associations, concept extraction |
-| **Image Generation** | Qwen Image Edit (fal.ai) | Extract individual objects from room photos |
+| **Vision AI** | Llama 4 Vision (Groq API) | Analyze room images, detect objects, generate labels |
+| **Language AI** | Llama 4 17B | Create mnemonic associations, concept extraction |
+| **Image Generation** | Qwen Image Edit (fal.ai API) | Extract individual objects from room photos |
 | **OCR** | PyMuPDF + Groq Vision | Extract text and concepts from PDF documents |
-| **RAG System** | ChromaDB + Sentence Transformers | Semantic search for chatbot Q&A |
-| **Embeddings** | all-MiniLM-L6-v2 | Vector embeddings for concept similarity |
+| **RAG System** | ChromaDB + Llama 8B Embedding | Semantic search for chatbot Q&A |
 
 ### Core Techniques
 
@@ -96,9 +95,14 @@ npm install
 npm run dev
 
 # Backend setup
-cd alpaca
 pip install -r requirements.txt
+# terminal 1
+cd alpaca
 python api_server.py
+# terminal 2 (from main folder)
+npm run dev
+
+
 
 
 

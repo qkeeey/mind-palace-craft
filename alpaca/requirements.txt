@@ -1,0 +1,21 @@
+# Core dependencies
+groq
+python-dotenv
+pdf2image
+Pillow
+
+# Vector database and embeddings
+chromadb==0.4.22
+sentence-transformers==2.3.1
+
+# FastAPI server
+fastapi
+uvicorn[standard]
+pydantic
+
+# Optional: YOLO for object detection
+# ultralytics
+
+# Note: pdf2image requires poppler-utils to be installed on your system
+# Windows: Download from https://github.com/oschwartz10612/poppler-windows/releases
+# Add to PATH environment variable

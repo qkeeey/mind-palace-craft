@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria API - Mind Palace Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .status {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .endpoint {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .endpoint-method {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .post {
+            background: #28a745;
+            color: white;
+        }
+        .get {
+            background: #007bff;
+            color: white;
+        }
+        .endpoint-path {
+            font-family: monospace;
+            color: #333;
+            font-size: 1.1em;
+        }
+        .endpoint-desc {
+            color: #666;
+            margin-top: 8px;
+            font-size: 0.9em;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            text-align: center;
+            color: #666;
+        }
+        .powered-by {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .logo {
+            color: #667eea;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏛️ Memoria API</h1>
+        <p class="subtitle">Mind Palace Mnemonic Generator powered by Meta's Llama</p>
+        
+        <div class="status">
+            ✅ API is running on http://localhost:5000
+        </div>
+
+        <h2 style="margin-bottom: 20px; color: #333;">Available Endpoints:</h2>
+
+        <div class="endpoint">
+            <span class="endpoint-method post">POST</span>
+            <span class="endpoint-path">/upload_pdf</span>
+            <p class="endpoint-desc">Upload PDF files for processing (multipart/form-data)</p>
+        </div>
+
+        <div class="endpoint">
+            <span class="endpoint-method post">POST</span>
+            <span class="endpoint-path">/generate_palace</span>
+            <p class="endpoint-desc">Generate mind palace mnemonics (takes 15-20 seconds)</p>
+        </div>
+
+        <div class="endpoint">
+            <span class="endpoint-method post">POST</span>
+            <span class="endpoint-path">/explain</span>
+            <p class="endpoint-desc">Get RAG-enhanced explanation for a concept</p>
+        </div>
+
+        <div class="endpoint">
+            <span class="endpoint-method post">POST</span>
+            <span class="endpoint-path">/narrative</span>
+            <p class="endpoint-desc">Generate complete narrative story chaining all mnemonics</p>
+        </div>
+
+        <div class="endpoint">
+            <span class="endpoint-method get">GET</span>
+            <span class="endpoint-path">/palace/&lt;floor_id&gt;</span>
+            <p class="endpoint-desc">View mnemonic associations table</p>
+        </div>
+
+        <div class="endpoint">
+            <span class="endpoint-method get">GET</span>
+            <span class="endpoint-path">/walkthrough/&lt;floor_id&gt;/&lt;room_id&gt;</span>
+            <p class="endpoint-desc">Interactive slideshow of mnemonic associations</p>
+        </div>
+
+        <div class="footer">
+            <p>📖 See <strong>API_DOCUMENTATION.md</strong> for detailed usage instructions</p>
+            <p>🚀 See <strong>SETUP_GUIDE.md</strong> for frontend integration guide</p>
+            <p class="powered-by">Powered by <span class="logo">Meta Llama 3.1</span> via Groq</p>
+        </div>
+    </div>
+</body>
+</html>

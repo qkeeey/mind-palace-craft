@@ -18,16 +18,28 @@ Mind Palace uses AI to automate the creative heavy-lifting, making this powerful
 4. **Study & Review** - Walk through your memory palace with interactive visualizations
 
 ## 🖼️ Application Preview
-
-**The Main dashboard shows previous works, and you can create a new Memory Palace from PDF document, which will be processed by OCR model.**  
-![Main Dashboard](src/pages/history.png)
-
-**The Choose Room page has several rooms you have created before, or some ready room interiors you can use right away.**  
-![Choose Room Page](src/pages/choose.png)
-
-**In Add New Room section you can either upload photos of objects yourself or let AI create their photos from Room photo. Each object gets labeling and description with Llama 4 17B model.**  
-![Add New Room](src/pages/create.png)
-
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>The Main dashboard shows previous works, and you can create a new Memory Palace from PDF document, which will be processed by OCR model.</b><br><br>
+      <img src="src/pages/history.png" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <b>The Choose Room page has several rooms you have created before, or some ready room interiors you can use right away.</b><br><br>
+      <img src="src/pages/choose.png" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>In Add New Room section you can either upload photos of objects yourself or let AI create their photos from Room photo. Each object gets labeling and description with Llama 4 17B model.</b><br><br>
+      <img src="src/pages/create.png" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <b>The Association table page includes your rooms objects pairing with concepts from PDF in a transitive way. There is also chatbot with RAG integrated, where you can ask for more questions about concepts.</b><br><br>
+      <img src="src/pages/association.png" width="100%">
+    </td>
+  </tr>
+</table>
 
 ## 🌟 Key Features
 
@@ -87,5 +99,6 @@ npm run dev
 cd alpaca
 pip install -r requirements.txt
 python api_server.py
+
 
 

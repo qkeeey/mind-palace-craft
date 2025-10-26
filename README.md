@@ -31,7 +31,7 @@ Mind Palace uses AI to automate the creative heavy-lifting, making this powerful
 | Technology | Model/Tool | Purpose |
 |------------|------------|---------|
 | **Vision AI** | Llama 4 Vision (Groq) | Analyze room images, detect objects, generate labels |
-| **Language AI** | Llama 3.3 70B (Groq) | Create mnemonic associations, concept extraction |
+| **Language AI** | Llama 4 17B (Groq) | Create mnemonic associations, concept extraction |
 | **Image Generation** | Qwen Image Edit (fal.ai) | Extract individual objects from room photos |
 | **OCR** | PyMuPDF + Groq Vision | Extract text and concepts from PDF documents |
 | **RAG System** | ChromaDB + Sentence Transformers | Semantic search for chatbot Q&A |
@@ -75,3 +75,4 @@ npm run dev
 cd alpaca
 pip install -r requirements.txt
 python api_server.py
+

@@ -17,6 +17,18 @@ Mind Palace uses AI to automate the creative heavy-lifting, making this powerful
 3. **AI Generation** - System creates associations between room objects and concepts
 4. **Study & Review** - Walk through your memory palace with interactive visualizations
 
+## 🖼️ Application Preview
+
+**The Main dashboard shows previous works, and you can create a new Memory Palace from PDF document, which will be processed by OCR model.**  
+![Main Dashboard](src/pages/history.png)
+
+**The Choose Room page has several rooms you have created before, or some ready room interiors you can use right away.**  
+![Choose Room Page](src/pages/choose.png)
+
+**In Add New Room section you can either upload photos of objects yourself or let AI create their photos from Room photo. Each object gets labeling and description with Llama 4 17B model.**  
+![Add New Room](src/pages/create.png)
+
+
 ## 🌟 Key Features
 
 ### Pages & Interfaces
@@ -75,4 +87,5 @@ npm run dev
 cd alpaca
 pip install -r requirements.txt
 python api_server.py
+
 
